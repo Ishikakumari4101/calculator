@@ -6,8 +6,12 @@ let arr=Array.from(buttons);
 arr.forEach(button =>{
     button.addEventListener('click', (MouseEvent) =>{
     if(MouseEvent.target.innerHTML == '='){
-        string=eval(string);
-        input.value = string;
+        if(input.value == ''){
+            alert("Please Write Some Number")
+        }else{
+            string=eval(string);
+            input.value = string;
+        }
     }
     else if(MouseEvent.target.innerHTML == 'AC'){
         string= "";
